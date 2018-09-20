@@ -1,3 +1,29 @@
 .fancy-header {
     color: purple;
 }
+.fancy-header { text-align: center;
+}
+#container h1, h2 {
+    color: orangered;
+}
+h2 {
+    text-decoration: underline
+}
+body {
+    background-color: darkgrey;
+    background-image: url(../img/beach-island-maldives-1430677.jpg);
+}
+ul {
+    list-style-type: square;
+}
+html {
+    font-style: italic;
+    font-family: 'Shadows Into Light', cursive;
+}
+td, tr {
+    padding: 1em;
+}
+/* mouse over link (:hover) */
+a:hover {
+    color: #ffffff;
+}
