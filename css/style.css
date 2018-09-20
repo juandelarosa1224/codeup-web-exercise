@@ -1,10 +1,10 @@
 .fancy-header {
-    color: purple;
+    color: orangered;
 }
 .fancy-header { text-align: center;
 }
 #container h1, h2 {
-    color: orangered;
+    color: limegreen;
 }
 h2 {
     text-decoration: underline
@@ -12,6 +12,10 @@ h2 {
 body {
     background-color: darkgrey;
     background-image: url(../img/beach-island-maldives-1430677.jpg);
+}
+ol {
+    list-style: circle;
+    color: white;
 }
 ul {
     list-style-type: square;
@@ -25,5 +29,5 @@ td, tr {
 }
 /* mouse over link (:hover) */
 a:hover {
-    color: #ffffff;
+    color: #ffff00;
 }
