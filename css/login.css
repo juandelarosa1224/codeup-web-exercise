@@ -1,11 +1,12 @@
 * {
     padding: 0;
     margin: 0;
+    border: 100px;
 }
 
 body, html {
-    height: 100%;
-    width: 100%;
+    height: 75%;
+    width: 75%;
     background-color: #cbffcd;
     font-family: Arial, Ubuntu, sans-serif;
 }
@@ -13,6 +14,9 @@ body, html {
 form {
     /* This form should be separated from other elements by 1em */
     /* There must be 1em between the content and the border of this element */
+    box-sizing: content-box;
+    width: 210px;
+    padding: 210px;
 }
 
 fieldset {
@@ -22,6 +26,7 @@ fieldset {
     /* There must be 1em between the content and the border of this element */
     /* It should have no border */
     /* Its background should be white */
+    box-sizing: border-box;
 }
 
 .width-80 {
@@ -52,7 +57,7 @@ fieldset {
     /* There must be a separation of 8px between the text and the border of this element */
     /* The text color of this element should be white and bold */
     /* The border of this element should be 1px, and its color should be light grey */
-    background-color: #0fb784;
+    background-color: #ffffff;
 }
 
 .btn-block {
