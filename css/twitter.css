@@ -46,7 +46,7 @@ a {
 }
 .nav-item {
     display: inline-block;
-    padding: 1.5em
+    padding: 1.5em;
 }
 .profile {
     background: var(--light-bg);
@@ -91,18 +91,18 @@ ul {
 .media {
     border-width: 100%;
     background: var(--light-bg);
-    border-bottom: 1px var(--separator-color);
+    border-bottom: 1px solid var(--separator-color);
     padding: .5em;
     overflow: auto;
 }
 .media-image {
-    width: 50px;
+    max-width: 50px;
     margin: 1.33em;
     float: left;
 }
 .media-body {
-    float: none;
-    width: calc(100% - 1em)
+    float: left;
+    width: calc(100% - 50px)
 }
 .btn {
     border: 1px solid var(--main-link-color);
