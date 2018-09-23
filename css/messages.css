@@ -6,19 +6,18 @@ body, html {
     font-family: Arial, Ubuntu, sans-serif;
 }
 .message {
-    margin: 10px;
+    margin: .5em;
     border: 1px solid rgb(209, 209, 208);
     padding: .5em;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .message-info {
     color: rgb(46, 26, 134);
     background-color: rgba(206, 222, 254);
 }
-
 .message-success{
     color: rgb(53, 136, 89);
-    background-color: rgb(207	244	219	);
+    background-color: rgb(207,244, 219);
 }
 .message-warning{
     color: rgb(148, 131, 45);
