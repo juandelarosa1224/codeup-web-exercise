@@ -65,15 +65,14 @@ a {
     width: calc(25% - 1em);
     margin: 0 .5em;
 }
-ul {
-    list-style: none;
-}
 .profile-entry {
     margin: .5em;
 }
 .profile-items {
     padding: 0;
-
+}
+ul {
+    list-style: none;
 }
 .timeline {
     float: left;
@@ -86,10 +85,10 @@ ul {
     margin: 0 .5em;
 }
 .container {
-    padding: 2em;
+    margin-top: 2em;
 }
 .media {
-    border-width: 100%;
+    width: 100%;
     background: var(--light-bg);
     border-bottom: 1px solid var(--separator-color);
     padding: .5em;
@@ -97,7 +96,7 @@ ul {
 }
 .media-image {
     max-width: 50px;
-    margin: 1.33em;
+    margin-top: 1.33em;
     float: left;
 }
 .media-body {
