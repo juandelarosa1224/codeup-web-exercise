@@ -1,0 +1,33 @@
+@media only screen and (min-width: 768px) {
+    body {
+        background-color: lightblue;
+    }
+}
+.responsive{
+    width: 100%;
+    height: auto;
+}
+h1 {
+    position: relative;
+    float:left;
+    width: 50%;
+}
+ul {
+    list-style: none;
+}
+.nav-links {
+    position: relative;
+    display: inline-block;
+    float: right;
+    background-color: red;
+    margin: 1em 0 1em 0;
+}
+.main {
+    float: left;
+    width: 50%;
+}
+.sub-section {
+    float: right;
+    font-style: italic;
+    width: 50%;
+}
