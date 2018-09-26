@@ -80,10 +80,11 @@ ul {
 
 .main {
     float: left;
-    width: 50%;
+    box-sizing: border-box;
 }
 .sub-section {
     float: right;
     font-style: italic;
-    width: 50%;
+    box-sizing: border-box;
 }
+/* this is the new code */

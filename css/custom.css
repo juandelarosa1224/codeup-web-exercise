@@ -1,0 +1,12 @@
+
+.jumbotron{
+    background-image: (img/pizza.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+h1 {
+
+}
+nav {
+    display: inline-block;
+}
