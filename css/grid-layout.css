@@ -1,8 +1,9 @@
 /* CSS */
 .container {
     margin: 0 auto;
-    width: 95%;
+    width: 80%;
     max-width: 1200%;
+    background-color: blue;
 }
 .row {
     width:100%;
@@ -15,10 +16,10 @@
 .column {
     float: left;
     padding: 10px;
-    border: 1px solid;
     margin: .5em 0;
     box-sizing: border-box;
     background-color: lightgrey;
+    border: 1px solid black;
 }
 .column.one-third {
     width: 33.33%;
@@ -29,9 +30,12 @@
 .column.one-fourth {
     width: 25%;
 }
+.column.one-sixth {
+    width: 16.66%;
+}
 .column.one-eighth {
     width: 12.5%;
-    margin-bottom: 2em;
+    margin-bottom: 2em 0;
 }
 
 
