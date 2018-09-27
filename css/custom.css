@@ -3,7 +3,8 @@
 }
 h1 {
     opacity: .5;
-    background-color: rgba(198, 205, 205, 0.8);
+    background-color: white;
+    background-size: cover;
 }
 .btn {
     float: right;
