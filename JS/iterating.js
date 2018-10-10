@@ -19,14 +19,15 @@
      * accessing each element's index.
      */
     // console.log('There are ' + names.length + ' names in the array');
-    //
+
     // console.log('The first name is: ' + names[0]);
-    //
+    // console.log(names[0]);
     // console.log('The second name is: ' + names[1]);
-    //
+    // console.log(names[1]);
     // console.log('The third name is: ' + names[2]);
-    //
+    // console.log(names[2]);
     // console.log('The fourth name is: ' + names[3]);
+    // console.log(names[3]);
 
     /**
      * TODO:
@@ -64,19 +65,49 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-    // function first () {
-    //     console.log(names[0])
+    // function first (array) {
+    //     return array[0];
     // }
-    // first();
     //
-    // function second () {
-    //     console.log(names[1])
+    // function second (array) {
+    //      return array[1]
     // }
     // second();
     //
-    // function last () {
-    //     console.log(names[3])
+    // function last (array) {
+    //      return array[array.length -1]
     // }
-    // last();
 
 })();
+
+// ================================= ARRAY BONUSES
+// 1. Create a function that returns a random day of the week
+// 2. Create a function that takes a single letter and returns what number the letter is in the alphabet. Ignore case.
+// someFunction("a") // returns 1
+// someFunction("z") // returns 26
+// 3. Create a function that returns the longest string in a given array of string elements
+// 4. Create a function that takes in two arrays of number inputs. If all numbers added together in the first array is equal to all the number inputs added in the second array, return true, otherwise, false. Only add together numeric elements but either array may contain non-numeric elements.
+//     var arr1 = ['bob', 1, true, 1, 2];
+// var arr2 = [2, null, undefined, 0, 2, "apple"]
+// exampleFunction(arr1, arr2) // returns true
+
+
+
+// var days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+//
+//
+//
+// function randomDay () {
+//     console.log(days[5])
+// }
+// randomDay();
+
+
+var ticTacToe = [
+    [0, 1, 2],
+    [0, 1, 2],
+    [0, 1, 2]
+];
+
+ticTacToe [1] [1] = "x";
+// first set of [] determines
