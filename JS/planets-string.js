@@ -26,10 +26,17 @@
      * string, and <li> tags around each planet.
      */
 
-    planetsString + planetsArray.join("<br>");
+    planetsString = planetsArray.join("<br>");
 
-    console.log(planetsString)
+    console.log(planetsString);
 
+    var htmlString = "<ul><li>";
+
+    htmlString += planetsArray.join("</li><li>");
+
+    htmlString += "</li></ul>";
+
+    document.body.innerHTML = htmlString;
 
 }
 // )();
