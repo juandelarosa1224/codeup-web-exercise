@@ -142,6 +142,7 @@ console.log(person.lastName);
    }
 
    // console.log("Book #" + parseFloat(i + 1) + "\ntitle: " + books[i].title + "\nauthor: " + books[i].authorFirstName + " " + books[i].authorLastName + "---");
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -152,4 +153,5 @@ console.log(person.lastName);
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
 })();
