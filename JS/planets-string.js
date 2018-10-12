@@ -30,6 +30,8 @@
 
     console.log(planetsString);
 
+// html solution //
+
     var htmlString = "<ul><li>";
 
     htmlString += planetsArray.join("</li><li>");
