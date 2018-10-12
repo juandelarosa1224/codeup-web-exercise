@@ -27,7 +27,7 @@ console.log(person.lastName);
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
     person.sayHello = function(){
-        return "Hello " + person.firstName + person.lastName;
+        return "Hello " + person.firstName + " " + person.lastName;
     };
     console.log(person.sayHello());
 
@@ -51,10 +51,15 @@ console.log(person.lastName);
         {name: 'George', amount: 320}
     ];
     shoppers.forEach(function(shopper) {
-        if (shopper.amount >= 200) {
+        if (shopper.amount > 200) {
+
             var twelve = shopper.amount * .12;
+
             var discount = shopper.amount - twelve;
-            console.log("Wow" + " " + shopper.name + '!' + "Your total before discount was" + " " + shopper.amount + "," + " " + "with the discount added, your total is" + " " + discount + " " + "your new total is now" + " " + twelve);
+
+            console.log(shopper.name + '!' + "Your total before discount was" + " " + shopper.amount + "," + " " + "with the discount added, your total is" + " " + twelve + " " + "your new total is now" + " " + discount);
+        } else {
+            console.log("SORRY!!! " + shopper.name + '!' + " " + "you did not receive a discount today.")
         }
 
     });
@@ -129,8 +134,14 @@ console.log(person.lastName);
      *      ...
      */
    for (var i = 0; i <= 4; i ++) {
-   console.log("Book #" + parseFloat(i + 1) + "\ntitle: " + books[i].title + "\nauthor: " + books[i].authorFirstName + " " + books[i].authorLastName);
+       var message ="";
+       message += "Book #" + parseFloat(i + 1) + "\ntitle: " + books[i].title + "\n";
+       message += "author: " + books[i].authorFirstName + books[i].authorLastName + "\n";
+       message += "---";
+       console.log(message);
    }
+
+   // console.log("Book #" + parseFloat(i + 1) + "\ntitle: " + books[i].title + "\nauthor: " + books[i].authorFirstName + " " + books[i].authorLastName + "---");
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
