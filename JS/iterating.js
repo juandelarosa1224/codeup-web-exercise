@@ -118,7 +118,7 @@
  * JS Array Practice
  * Array creation, manipulation, searching etc...
  */
-var numbers [];
+// var numbers [];
 // Exercise 0. Write a function named first() that returns only the first element of an array
 
 // Exercise 1. Write a function named secondToLast() that returns the second to last element
@@ -131,9 +131,9 @@ var numbers [];
 
 // Exercise 4. Write a function named addTwoArrays that takes in two, one dimensional arrays. The function should return a single array containing all of the elements of the first array along with all of the elements of the second array
 // Example: addTwoArrays([1, 2, 3], [4, 5, 6]) should return [1, 2, 3, 4, 5, 6]
-function addTwoArrays ([1, 2, 3], [4, 5, 6]){
-    return addTwoArrays
-}
+// function addTwoArrays ([1, 2, 3], [4, 5, 6]){
+//     return addTwoArrays
+// }
 // Exercise 5. Write a function named getUniqueValues that takes in an array and returns the array without any duplicates
 // Example: getUniqueValues(["a", "b", "a", "b", "c", "c"]) should return ["a", "b", "c"]
 
