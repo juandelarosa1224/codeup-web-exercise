@@ -7,9 +7,9 @@
  */
 var colors = ['red', 'orange', 'black', 'purple', 'blue', 'green'];
 // Exercise 0. Write a function named first() that returns only the first element of an array
-    first (colors);
-    return colors[0];
-
+    function first (colors) {
+        return colors[0];
+    }
 // Exercise 1. Write a function named secondToLast() that returns the second to last element
      secondToLast (colors);
     return colors[colors.length - 1];
