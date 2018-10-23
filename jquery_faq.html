@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="not-invisible">Click button to reveal answers!</div>
+<style>
+    .invisible {
+        display: none;
+    }
+</style>
+<dl>
+    <dt>FAQ1</dt>
+    <dd class="invisible">Answer 1</dd>
+    <dt>FAQ2</dt>
+    <dd class="invisible">Answer 2</dd>
+    <dt>FAQ3</dt>
+    <dd class="invisible">Answer 3</dd>
+    <dt>FAQ4</dt>
+    <dd class="invisible">Answer 4</dd>
+    <dt>FAQ5</dt>
+    <dd class="invisible">Answer 5</dd>
+    <dt>FAQ6</dt>
+    <dd class="invisible">Answer 6</dd>
+    <dt>FAQ7</dt>
+    <dd class="invisible">Answer 7</dd>
+    <dt>FAQ8</dt>
+    <dd class="invisible">Answer 8</dd>
+    <dt>FAQ9</dt>
+    <dd class="invisible">Answer 9</dd>
+    <dt>FAQ10</dt>
+    <dd class="invisible">Answer 10</dd>
+</dl>
+
+<button class="answer-btn"> Reveal </button>
+<script>
+        "use strict";
+    $(document).ready(function() {
+
+        $('.answer-btn').click(function () {
+            $('dd').click('invisible');
+        });
+        $('dt').click(function() {
+           $(this).css('background', 'yellow');
+        });
+    });
+</script>
+
+</body>
+</html>
