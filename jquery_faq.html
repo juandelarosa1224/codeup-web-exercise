@@ -5,7 +5,38 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <body>
-<!--<div id="not-invisible">Click button to reveal answers!</div>-->
+<!--<div>-->
+    <!--<div class="row box1 col-4">-->
+        <!--<img id="pic1" src="img/download (1).jpeg" height="400"width="400"/>-->
+        <!--<br>-->
+        <!--<br>-->
+        <!--<button class="swap1">Swap</button>-->
+    <!--</div>-->
+
+    <!--<div class="row box2 col-4">-->
+        <!--<img id="pic2" src="img/random_number.png" height="400"width="400"/>-->
+        <!--<br>-->
+        <!--<br>-->
+        <!--<button class="swap2">Swap</button>-->
+    <!--</div>-->
+
+    <!--<div class="row box3 col-4">-->
+        <!--<img id="pic3" src="img/sandwich.png" height="400"width="400"/>-->
+        <!--<br>-->
+        <!--<br>-->
+        <!--<button class="swap3">Swap</button>-->
+    <!--</div>-->
+<!--</div>-->
+
+<div id="x">
+    <h1>Would you like to sign up for our newsletter?</h1>
+    <span> X </span>
+</div>
+<div class="Notice">
+    <h2>Would you like to register to this Site?</h2>
+</div>
+
+
 <style>
     .invisible {
         display: none;
@@ -19,10 +50,18 @@
     .box3 {
         float: left;
     }
+
+    ul {
+        display: none;
+    }
+    h2 {
+        display: none;
+    }
     /*.highlight {*/
         /*background-color: yellow;*/
     /*}*/
 </style>
+
 <dl>
     <dt>FAQ1</dt>
     <dd class="invisible">Answer 1</dd>
@@ -74,32 +113,6 @@
 
 <button class="highlight"> Highlight </button>
 <br>
-
-    <div class="row box1 col-4">
-    <div id="pic1">
-        <img src="img/download (1).jpeg" height="225" width="225"/>
-        <br>
-        <button class="swap1">Swap</button>
-    </div>
-    </div>
-
-<div class="row box2 col-4">
-    <div id="pic2">
-        <img src="img/random_number.png" height="144" width="400"/>
-        <br>
-        <button class="swap2">Swap</button>
-    </div>
-</div>
-
-    <div class="row box3 col-4">
-    <div id="pic3">
-        <img src="img/sandwich.png" height="299" width="360"/>
-        <br>
-        <button class="swap3">Swap</button>
-    </div>
-    </div>
-
-
 <script
         src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
@@ -131,19 +144,22 @@
             $(this).parent().children().first().css('color', 'blue');
         });
 
-        $('.swap1').click(function () {
-            $(this).toggleId('box1');
+        $('div').click(function() {
+            $('#x').toggle();
         });
 
-        $('.swap2').click(function () {
-            $(this).toggleClass('box2');
+
+        $('h3').click(function () {
+            $(this).next().slideToggle();
         });
+
+        $("h2").fadeToggle(8000);
     });
 
 
 </script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></head>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </body>
 </html>
