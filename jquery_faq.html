@@ -5,32 +5,35 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <body>
-<div>
-    <div class="row box1 col-4">
-        <img id="pic1" src="img/download (1).jpeg" height="225" width="225"/>
-        <br>
-        <br>
-        <button class="swap1">Swap</button>
-    </div>
+<!--<div>-->
+    <!--<div class="row box1 col-4">-->
+        <!--<img id="pic1" src="img/download (1).jpeg" height="400"width="400"/>-->
+        <!--<br>-->
+        <!--<br>-->
+        <!--<button class="swap1">Swap</button>-->
+    <!--</div>-->
 
-    <div class="row box2 col-4">
-        <img id="pic2" src="img/random_number.png" height="225" width="225"/>
-        <br>
-        <br>
-        <button class="swap2">Swap</button>
-    </div>
+    <!--<div class="row box2 col-4">-->
+        <!--<img id="pic2" src="img/random_number.png" height="400"width="400"/>-->
+        <!--<br>-->
+        <!--<br>-->
+        <!--<button class="swap2">Swap</button>-->
+    <!--</div>-->
 
-    <div class="row box3 col-4">
-        <img id="pic3" src="img/sandwich.png" height="225" width="225"/>
-        <br>
-        <br>
-        <button class="swap3">Swap</button>
-    </div>
-</div>
+    <!--<div class="row box3 col-4">-->
+        <!--<img id="pic3" src="img/sandwich.png" height="400"width="400"/>-->
+        <!--<br>-->
+        <!--<br>-->
+        <!--<button class="swap3">Swap</button>-->
+    <!--</div>-->
+<!--</div>-->
 
 <div id="x">
     <h1>Would you like to sign up for our newsletter?</h1>
     <span> X </span>
+</div>
+<div class="Notice">
+    <h2>Would you like to register to this Site?</h2>
 </div>
 
 
@@ -49,6 +52,9 @@
     }
 
     ul {
+        display: none;
+    }
+    h2 {
         display: none;
     }
     /*.highlight {*/
@@ -117,49 +123,43 @@
     $(function() {
         "use strict";
 
-        // $('#answer-btn').click(function () {
-        //     $('dd').toggleClass('invisible');
-        // });
-        // $('dt').click(function() {
-        //    $(this).css('background', 'yellow');
-        // });
-        //
-        // $('.highlight').click(function() {
-        // $('ul').each(function() {
-        //     $(this).children().last().css('background', 'yellow')
-        //     })
-        // });
-        //
-        // $('h3').click(function () {
-        //     $(this).next().children().css('font-weight', 'bold');
-        // });
-        //
-        // $('li').click(function () {
-        //     $(this).parent().children().first().css('color', 'blue');
-        // });
+        $('#answer-btn').click(function () {
+            $('dd').toggleClass('invisible');
+        });
+        $('dt').click(function() {
+           $(this).css('background', 'yellow');
+        });
 
-        // $('#pic1').click(function() {
-        //     $(this).find("#pic2").toggle();
-        // })
+        $('.highlight').click(function() {
+        $('ul').each(function() {
+            $(this).children().last().css('background', 'yellow')
+            })
+        });
 
+        $('h3').click(function () {
+            $(this).next().children().css('font-weight', 'bold');
+        });
 
+        $('li').click(function () {
+            $(this).parent().children().first().css('color', 'blue');
+        });
 
-
-        $('span').click(function() {
+        $('div').click(function() {
             $('#x').toggle();
         });
 
 
         $('h3').click(function () {
-                $(this).slideToggle(8000);
-            });
+            $(this).next().slideToggle();
+        });
 
+        $("h2").fadeToggle(8000);
     });
 
 
 </script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></head>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 </body>
 </html>
