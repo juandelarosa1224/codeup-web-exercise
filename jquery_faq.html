@@ -5,33 +5,29 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <body>
-<div>
-    <div class="row box1 col-4">
-        <img id="pic1" src="img/download (1).jpeg" height="225" width="225"/>
-        <br>
-        <br>
-        <button class="swap1">Swap</button>
-    </div>
+<!--<div>-->
+    <!--<div class="row box1 col-4">-->
+        <!--<img id="pic1" src="img/download (1).jpeg" height="225" width="225"/>-->
+        <!--<br>-->
+        <!--<br>-->
+        <!--<button class="swap1">Swap</button>-->
+    <!--</div>-->
 
-    <div class="row box2 col-4">
-        <img id="pic2" src="img/random_number.png" height="225" width="225"/>
-        <br>
-        <br>
-        <button class="swap2">Swap</button>
-    </div>
+    <!--<div class="row box2 col-4">-->
+        <!--<img id="pic2" src="img/random_number.png" height="225" width="225"/>-->
+        <!--<br>-->
+        <!--<br>-->
+        <!--<button class="swap2">Swap</button>-->
+    <!--</div>-->
 
-    <div class="row box3 col-4">
-        <img id="pic3" src="img/sandwich.png" height="225" width="225"/>
-        <br>
-        <br>
-        <button class="swap3">Swap</button>
-    </div>
-</div>
+    <!--<div class="row box3 col-4">-->
+        <!--<img id="pic3" src="img/sandwich.png" height="225" width="225"/>-->
+        <!--<br>-->
+        <!--<br>-->
+        <!--<button class="swap3">Swap</button>-->
+    <!--</div>-->
+<!--</div>-->
 
-<div id="x">
-    <h1>Would you like to sign up for our newsletter?</h1>
-    <span> X </span>
-</div>
 
 
 <style>
@@ -56,6 +52,10 @@
     /*}*/
 </style>
 
+<div id="x">
+    <h1>Would you like to sign up for our newsletter?</h1>
+    <span> X </span>
+</div>
 <dl>
     <dt>FAQ1</dt>
     <dd class="invisible">Answer 1</dd>
@@ -129,7 +129,7 @@
         //     $(this).children().last().css('background', 'yellow')
         //     })
         // });
-        //
+        // //
         // $('h3').click(function () {
         //     $(this).next().children().css('font-weight', 'bold');
         // });
@@ -149,10 +149,10 @@
             $('#x').toggle();
         });
 
+        // The uls next to each h3 that contain facts about each park should start out hidden,
+        // and when the corresponding h3 is clicked, the display of the ul should be toggled with a sliding effect.
 
-        $('h3').click(function () {
-                $(this).slideToggle(8000);
-            });
+
 
     });
 
