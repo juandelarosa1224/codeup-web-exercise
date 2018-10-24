@@ -130,6 +130,14 @@
         $('li').click(function () {
             $(this).parent().children().first().css('color', 'blue');
         });
+
+        $('.swap1').click(function () {
+            $(this).toggleId('box1');
+        });
+
+        $('.swap2').click(function () {
+            $(this).toggleClass('box2');
+        });
     });
 
 
