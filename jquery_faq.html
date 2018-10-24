@@ -3,13 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-</head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <body>
-<div id="not-invisible">Click button to reveal answers!</div>
+<!--<div id="not-invisible">Click button to reveal answers!</div>-->
 <style>
     .invisible {
         display: none;
     }
+    .box1 {
+        float: left;
+    }
+    .box2 {
+        float: left;
+    }
+    .box3 {
+        float: left;
+    }
+    /*.highlight {*/
+        /*background-color: yellow;*/
+    /*}*/
 </style>
 <dl>
     <dt>FAQ1</dt>
@@ -33,20 +45,97 @@
     <dt>FAQ10</dt>
     <dd class="invisible">Answer 10</dd>
 </dl>
+<button id="answer-btn"> Reveal </button>
 
-<button class="answer-btn"> Reveal </button>
+<h3 id="national-parks-heading">National Parks</h3>
+    <ul id="national-parks">
+        <li>Arches</li>
+        <li>Badlands</li>
+        <li>Carlsbad Caverns</li>
+        <li>Denali</li>
+        <li>Everglades</li>
+    </ul>
+<h3>State Parks of Texas</h3>
+    <ul id="state-parks-texas">
+        <li>Abilene</li>
+        <li>Big Bend</li>
+        <li>Choke Canyon</li>
+        <li>Davis Mountains</li>
+        <li>Enchanted Rock</li>
+    </ul>
+<h3>State of Texas Parks</h3>
+    <ul id="state-texas-parks">
+        <li>Abilene</li>
+        <li>Big Bend</li>
+        <li>Choke Canyon</li>
+        <li>Davis Mountains</li>
+        <li>Enchanted Rock</li>
+    </ul>
+
+<button class="highlight"> Highlight </button>
+<br>
+
+    <div class="row box1 col-4">
+    <div id="pic1">
+        <img src="img/download (1).jpeg" height="225" width="225"/>
+        <br>
+        <button class="swap1">Swap</button>
+    </div>
+    </div>
+
+<div class="row box2 col-4">
+    <div id="pic2">
+        <img src="img/random_number.png" height="144" width="400"/>
+        <br>
+        <button class="swap2">Swap</button>
+    </div>
+</div>
+
+    <div class="row box3 col-4">
+    <div id="pic3">
+        <img src="img/sandwich.png" height="299" width="360"/>
+        <br>
+        <button class="swap3">Swap</button>
+    </div>
+    </div>
+
+
+<script
+        src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous">
+</script>
+
 <script>
+    $(function() {
         "use strict";
-    $(document).ready(function() {
 
-        $('.answer-btn').click(function () {
-            $('dd').click('invisible');
+        $('#answer-btn').click(function () {
+            $('dd').toggleClass('invisible');
         });
         $('dt').click(function() {
            $(this).css('background', 'yellow');
         });
-    });
-</script>
 
+        $('.highlight').click(function() {
+        $('ul').each(function() {
+            $(this).children().last().css('background', 'yellow')
+            })
+        });
+
+        $('h3').click(function () {
+            $(this).next().children().css('font-weight', 'bold');
+        });
+
+        $('li').click(function () {
+            $(this).parent().children().first().css('color', 'blue');
+        });
+    });
+
+
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></head>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 </body>
 </html>
