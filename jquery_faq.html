@@ -5,94 +5,67 @@
     <title>Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <body>
-<!--<div>-->
-    <!--<div class="row box1 col-4">-->
-        <!--<img id="pic1" src="img/download (1).jpeg" height="225" width="225"/>-->
-        <!--<img id="pic1" src="img/download (1).jpeg" height="400"width="400"/>-->
-        <!--<br>-->
-        <!--<br>-->
-        <!--<button class="swap1">Swap</button>-->
-    <!--</div>-->
+    <div id="gallery">
+        <img id="pic_left" src="img/sandwich.png" height="350" width="350"/>
+            <input type="button" onclick="swap();">
+        <img id="pic_right" src="img/download (1).jpeg" height="350" width="350"/>
+        <input type="button" onclick="swap();">
+        <img id="pic_center" src="img/random_number.png" height="350" width="350"/>
+        <input type="button" onclick="swap();">
+        <form>
+        </form>
+    </div>
 
-    <!--<div class="row box2 col-4">-->
-        <!--<img id="pic2" src="img/random_number.png" height="225" width="225"/>-->
-        <!--<img id="pic2" src="img/random_number.png" height="400"width="400"/>-->
-        <!--<br>-->
-        <!--<br>-->
-        <!--<button class="swap2">Swap</button>-->
-    <!--</div>-->
-
-    <!--<div class="row box3 col-4">-->
-        <!--<img id="pic3" src="img/sandwich.png" height="225" width="225"/>-->
-        <!--<img id="pic3" src="img/sandwich.png" height="400"width="400"/>-->
-        <!--<br>-->
-        <!--<br>-->
-        <!--<button class="swap3">Swap</button>-->
-    <!--</div>-->
-<!--</div>-->
-
-<div id="x">
-    <h1>Would you like to sign up for our newsletter?</h1>
-    <span> X </span>
-</div>
-<div class="Notice">
-    <h2>Would you like to register to this Site?</h2>
-</div>
-
-<style>
+    <div id="x">
+        <h1>Would you like to sign up for our newsletter?</h1>
+        <span> X </span>
+    </div>
+    <div class="alert alert-warning alert-dismissible" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    </div>
+    <br>
+    <br>
+    <div class="Notice">
+        <h2>Would you like to register?</h2>
+    </div>
+    <style>
     .invisible {
         display: none;
     }
-    .box1 {
-        float: left;
-    }
-    .box2 {
-        float: left;
-    }
-    .box3 {
-        float: left;
-    }
-
     ul {
         display: none;
     }
     h2 {
         display: none;
     }
-    /*.highlight {*/
-        /*background-color: yellow;*/
-    /*}*/
 </style>
 
-<div id="x">
-    <h1>Would you like to sign up for our newsletter?</h1>
-    <span> X </span>
-</div>
-<dl>
-    <dt>FAQ1</dt>
-    <dd class="invisible">Answer 1</dd>
-    <dt>FAQ2</dt>
-    <dd class="invisible">Answer 2</dd>
-    <dt>FAQ3</dt>
-    <dd class="invisible">Answer 3</dd>
-    <dt>FAQ4</dt>
-    <dd class="invisible">Answer 4</dd>
-    <dt>FAQ5</dt>
-    <dd class="invisible">Answer 5</dd>
-    <dt>FAQ6</dt>
-    <dd class="invisible">Answer 6</dd>
-    <dt>FAQ7</dt>
-    <dd class="invisible">Answer 7</dd>
-    <dt>FAQ8</dt>
-    <dd class="invisible">Answer 8</dd>
-    <dt>FAQ9</dt>
-    <dd class="invisible">Answer 9</dd>
-    <dt>FAQ10</dt>
-    <dd class="invisible">Answer 10</dd>
-</dl>
-<button id="answer-btn"> Reveal </button>
+    <dl>
+        <dt>FAQ1</dt>
+        <dd class="invisible">Answer 1</dd>
+        <dt>FAQ2</dt>
+        <dd class="invisible">Answer 2</dd>
+        <dt>FAQ3</dt>
+        <dd class="invisible">Answer 3</dd>
+        <dt>FAQ4</dt>
+        <dd class="invisible">Answer 4</dd>
+        <dt>FAQ5</dt>
+        <dd class="invisible">Answer 5</dd>
+        <dt>FAQ6</dt>
+        <dd class="invisible">Answer 6</dd>
+        <dt>FAQ7</dt>
+        <dd class="invisible">Answer 7</dd>
+        <dt>FAQ8</dt>
+        <dd class="invisible">Answer 8</dd>
+        <dt>FAQ9</dt>
+        <dd class="invisible">Answer 9</dd>
+        <dt>FAQ10</dt>
+        <dd class="invisible">Answer 10</dd>
+    </dl>
+        <button id="answer-btn"> Reveal </button>
 
-<h3 id="national-parks-heading">National Parks</h3>
+    <h3 id="national-parks-heading">National Parks</h3>
     <ul id="national-parks">
         <li>Arches</li>
         <li>Badlands</li>
@@ -100,7 +73,7 @@
         <li>Denali</li>
         <li>Everglades</li>
     </ul>
-<h3>State Parks of Texas</h3>
+    <h3>State Parks of Texas</h3>
     <ul id="state-parks-texas">
         <li>Abilene</li>
         <li>Big Bend</li>
@@ -108,7 +81,7 @@
         <li>Davis Mountains</li>
         <li>Enchanted Rock</li>
     </ul>
-<h3>State of Texas Parks</h3>
+    <h3>State of Texas Parks</h3>
     <ul id="state-texas-parks">
         <li>Abilene</li>
         <li>Big Bend</li>
@@ -117,87 +90,56 @@
         <li>Enchanted Rock</li>
     </ul>
 
-<button class="highlight"> Highlight </button>
-<br>
-<script
-        src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
-        crossorigin="anonymous">
-</script>
+    <button class="highlight"> Highlight </button>
+    <br>
+    <script
+            src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous">
+    </script>
 
 <script>
     $(function() {
         "use strict";
-
-        // $('#answer-btn').click(function () {
-        //     $('dd').toggleClass('invisible');
-        // });
-        // $('dt').click(function() {
-        //    $(this).css('background', 'yellow');
-        // });
-        //
-        // $('.highlight').click(function() {
-        // $('ul').each(function() {
-        //     $(this).children().last().css('background', 'yellow')
-        //     })
-        // });
-        // //
-        // $('h3').click(function () {
-        //     $(this).next().children().css('font-weight', 'bold');
-        // });
-        //
-        // $('li').click(function () {
-        //     $(this).parent().children().first().css('color', 'blue');
-        // });
-
-        // $('#pic1').click(function() {
-        //     $(this).find("#pic2").toggle();
-        // })
-
-
-
-
-        $('span').click(function() {
         $('#answer-btn').click(function () {
             $('dd').toggleClass('invisible');
         });
         $('dt').click(function() {
-           $(this).css('background', 'yellow');
+            $(this).css('background', 'yellow');
         });
-
         $('.highlight').click(function() {
-        $('ul').each(function() {
-            $(this).children().last().css('background', 'yellow')
+            $('ul').each(function() {
+                $(this).children().last().css('background', 'yellow')
             })
         });
-
         $('h3').click(function () {
             $(this).next().children().css('font-weight', 'bold');
         });
-
         $('li').click(function () {
             $(this).parent().children().first().css('color', 'blue');
         });
-
         $('div').click(function() {
-
             $('#x').toggle();
         });
-
-        // The uls next to each h3 that contain facts about each park should start out hidden,
-        // and when the corresponding h3 is clicked, the display of the ul should be toggled with a sliding effect.
-
-
         $('h3').click(function () {
             $(this).next().slideToggle();
         });
-
-
         $("h2").fadeToggle(8000);
 
+
+        // $.ajax("https://code.jquery.com/jquery-3.3.1.min.js")
     });
-
-
+    function swap() {
+        var leftID = document.getElementById('pic_left');
+            rightID = document.getElementById('pic_right');
+            centerID = document.getElementById('pic_center');
+            leftSRC = leftID.src;
+            rightSRC = rightID.src;
+            centerSRC = centerID.src;
+            leftID.src = rightSRC;
+            rightID.src = centerSRC;
+            centerID.src = rightSRC;
+    }
 </script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>

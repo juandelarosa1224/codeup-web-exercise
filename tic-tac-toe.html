@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Tic-Tac-Toe </title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <link type="text/css" rel="stylesheet" href="css/tic-tac-toe.css" />
+</head>
+<body>
+
+<table id='board'>
+    <tr>
+        <td></td><td></td><td></td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td>
+    </tr>
+    <tr>
+        <td></td><td></td><td></td>
+    </tr>
+</table>
+<script>
+    $(function() {
+
+        var move = 1;
+
+        var play = true;
+
+        $("#board tr td").click(function () {
+            if ($(this).text() == "" && play) {
+                if ((move % 2) == 1) {
+                    $(this).append("X");
+                }
+                else {
+                    $(this).append("O");
+                }
+                move++;
+                if (checkForWinner() != -1 && checkForWinner() != "") {
+                    if (checkForWinner() == "X") {
+                        alert("Player 1 wins!");
+                    }
+                    else {
+                        alert("Player 2 wins!");
+                    }
+                    play = false;
+                }
+            }
+        })
+    });
+</script>
+</body>
+</html>
