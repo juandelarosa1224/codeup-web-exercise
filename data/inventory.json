@@ -33,6 +33,11 @@
 },
   {
    "title": "leaf blower",
-    "quantity": "4"
+    "quantity": "4",
+    "categories": [
+      "tool",
+      "gas"
+    ],
+    "price": 100
   }
 ]
