@@ -30,5 +30,9 @@
     "tool"
   ],
   "price": 10
-}
+},
+  {
+   "title": "leaf blower",
+    "quantity": "4"
+  }
 ]
