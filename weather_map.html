@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--bootstrap here-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+</head>
+<body>
+<h1><strong>Weather Application</strong></h1>
+<br>
+<h2><em>San Antonio</em></h2>
+
+<style>
+    h1 {
+        text-align: center;
+        color: blue;
+    }
+    h2 {
+        text-align: center;
+        color: black;
+    }
+    .row {
+        width: 100%;
+    }
+    img{
+        width: 100%;
+    }
+    body {
+        background: lightblue;
+    }
+
+</style>
+<div class="row">
+    <div class="col m4">
+        <div class="card blue-grey darken-1">
+            <div class="card-content">
+                <div id="dayOneWeather"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col m4">
+        <div class="card blue-grey darken-1">
+            <div class="card-content">
+                <div id="day2"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col m4">
+        <div class="card blue-grey darken-1">
+            <div class="card-content">
+                <div id="day3"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="map"  style="width:100%;height:400px;" class="mt-5"></div>
+
+<script src="JS/jquery-2.2.4.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<script>
+$(function() {
+ "use strict";
+    // the following code provided by Justin.
+    const getMinMaxDayTemp = (data, days) => {
+        const temps = data.list.slice(days * 8 - 8, days * 8)
+            .reduce((prev, curr) => {
+                prev.push(curr.main.temp);
+                return prev;
+            }, []).sort();
+        return {min: temps.shift(), max: temps.pop()};
+    };
+    // DAY 1 WEATHER CARD WITH FUNCTION
+    // EACH DAY BEING CALLED SEPARATELY
+    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        APPID: "afcb30a21432acfdba4a600a918e4d07",
+        id: 4726206,
+        units: "imperial"
+    }).done(function(data) {
+        console.log(getMinMaxDayTemp(data, 1));
+    $('#dayOneWeather').append(getWeather(data));
+    });
+    function getWeather(data) {
+        var html = '';
+        html += '<div class="col m4">';
+        html += '<div class="card blue-grey darken-1">';
+        html += '<div class="card-content">';
+        html += '<span class="card-title">' + "High " + getMinMaxDayTemp(data, 1).max.toFixed(0) + '&deg' + "/ " + "Low " + getMinMaxDayTemp(data, 1).min.toFixed(0) + '&deg' + '</span>';
+        html += '<img class="weather-icon" src="http://openweathermap.org/img/w/' + data.list[0].weather[0].icon + '.png">';
+        html += '<p><span class="weatherCategory">Clouds: </span>' + data.list[0].weather[0].description + '</p>';
+        html += '<p><span class="weatherCategory">Humidity: </span>' + data.list[0].main.humidity + '%</p>';
+        html += '<p><span class="weatherCategory">Wind: </span>' + data.list[0].wind.speed + " mph" + '</p>';
+        html += '<p><span class="weatherCategory">Pressure: </span>' + data.list[0].main.pressure + '</p>';
+        html += '</div>';
+        html += '</div>';
+        html += '</div>';
+        return html;
+    }
+    // DAY 2 WEATHER CARD WITH FUNCTION.
+    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        APPID: "afcb30a21432acfdba4a600a918e4d07",
+        id: 4726206,
+        units: "imperial"
+    }).done(function(data) {
+        console.log(getMinMaxDayTemp(data, 2));
+        $('#day2').append(getWeather2(data));
+    });
+    function getWeather2(data) {
+        var html = "";
+        html += '<div class="col m4">';
+        html += '<div class="card blue-grey darken-1">';
+        html += '<div class="card-content">';
+        html += '<span class="card-title">' + "High " + getMinMaxDayTemp(data, 2).max.toFixed(0) + '&deg' + "/ " + "Low " + getMinMaxDayTemp(data, 2).min.toFixed(0) + '&deg' + '</span>';
+        html += '<img class="weather-icon" src="http://openweathermap.org/img/w/' + data.list[9].weather[0].icon + '.png">';
+        html += '<p><span class="weatherCategory">Clouds: </span>' + data.list[9].weather[0].description + '</p>';
+        html += '<p><span class="weatherCategory">Humidity: </span>' + data.list[9].main.humidity + '%</p>';
+        html += '<p><span class="weatherCategory">Wind: </span>' + data.list[9].wind.speed + " mph" + '</p>';
+        html += '<p><span class="weatherCategory">Pressure: </span>' + data.list[9].main.pressure + '</p>';
+        html += '</div>';
+        html += '</div>';
+        html += '</div>';
+        return html;
+    }
+    // DAY 3 WEATHER CARD WITH FUNCTION
+    $.get("http://api.openweathermap.org/data/2.5/forecast", {
+        APPID: "afcb30a21432acfdba4a600a918e4d07",
+        id: 4726206,
+        units: "imperial"
+    }).done(function(data) {
+        console.log(getMinMaxDayTemp(data, 2));
+        $('#day3').append(getWeather3(data));
+    });
+    function getWeather3(data) {
+        var html = "";
+        html += '<div class="col m4">';
+        html += '<div class="card blue-grey darken-1">';
+        html += '<div class="card-content">';
+        html += '<span class="card-title">' + "High " + getMinMaxDayTemp(data, 3).max.toFixed(0) + '&deg' + "/ " + "Low " + getMinMaxDayTemp(data, 3).min.toFixed(0) + '&deg' + '</span>';
+        html += '<img class="weather-icon" src="http://openweathermap.org/img/w/' + data.list[16].weather[0].icon + '.png">';
+        html += '<p><span class="weatherCategory">Clouds: </span>' + data.list[16].weather[0].description + '</p>';
+        html += '<p><span class="weatherCategory">Humidity: </span>' + data.list[16].main.humidity + '%</p>';
+        html += '<p><span class="weatherCategory">Wind: </span>' + data.list[16].wind.speed + " mph" + '</p>';
+        html += '<p><span class="weatherCategory">Pressure: </span>' + data.list[16].main.pressure + '</p>';
+        html += '</div>';
+        html += '</div>';
+        html += '</div>';
+        return html;
+    }
+    function initMap() {
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: {lat: 29.406853, lng: -98.504083}
+        });
+        var geocoder = new google.maps.Geocoder();
+
+        document.getElementById('submit').addEventListener('click', function() {
+            geocodeAddress(geocoder, map);
+        });
+    }
+    function geocodeAddress(geocoder, resultsMap) {
+        var address = document.getElementById('address').value;
+        geocoder.geocode({'address': address}, function(results, status) {
+            if (status === 'OK') {
+                resultsMap.setCenter(results[0].geometry.location);
+                var marker = new google.maps.Marker({
+                    map: resultsMap,
+                    position: results[0].geometry.location
+                });
+            } else {
+                alert('Geocode was not successful for the following reason: ' + status);
+            }
+        });
+    }
+    function inMap() {
+        var myLatLng = {lat: 29.6098, lng: -98.4986};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 10,
+            center: myLatLng
+        });
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+        });
+        var infowindow = new google.maps.InfoWindow({
+            content: "You're not lost, You are here!"
+        });
+        infowindow.open(map, marker);
+        marker.setMap(map);
+    }
+});
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2TQ6CLAIJjiONhaOjQwpEabylN0SjbZk
+&callback=initMap"
+        async defer></script>
+</body>
+</html>
+
+
+
