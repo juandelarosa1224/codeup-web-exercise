@@ -28,15 +28,18 @@
         width: 100%;
     }
     body {
-        background: lightblue;
+        background: orange;
     }
-
+    #map {
+        height: 400px;
+        width: 100%;
+    }
 </style>
 <div class="row">
     <div class="col m4">
         <div class="card blue-grey darken-1">
             <div class="card-content">
-                <div id="dayOneWeather"></div>
+                <div id="day1"></div>
             </div>
         </div>
     </div>
@@ -55,8 +58,7 @@
         </div>
     </div>
 </div>
-
-<div id="map"  style="width:100%;height:400px;" class="mt-5"></div>
+<div id="map" class="mt-5"></div>
 
 <script src="JS/jquery-2.2.4.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -82,7 +84,7 @@ $(function() {
         units: "imperial"
     }).done(function(data) {
         console.log(getMinMaxDayTemp(data, 1));
-    $('#dayOneWeather').append(getWeather(data));
+    $('#day1').append(getWeather(data));
     });
     function getWeather(data) {
         var html = '';
@@ -150,6 +152,12 @@ $(function() {
         html += '</div>';
         return html;
     }
+});
+
+</script>
+<script>
+
+    // GOOGLE MAPS CODE STARTS HERE
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 10,
@@ -175,7 +183,7 @@ $(function() {
             }
         });
     }
-    function inMap() {
+    function initMap() {
         var myLatLng = {lat: 29.6098, lng: -98.4986};
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 10,
@@ -185,17 +193,23 @@ $(function() {
             position: myLatLng,
             map: map,
         });
-        var infowindow = new google.maps.InfoWindow({
-            content: "You're not lost, You are here!"
-        });
-        infowindow.open(map, marker);
-        marker.setMap(map);
+        // var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
+        // var marker = new google.maps.Marker({
+        //     position: myLatlng,
+        //     map: map, // handle of the map
+        //     draggable:true
+        // });
+        // google.maps.event.addListener(
+        //     marker,
+        //     'drag',
+        //     function() {
+        //         document.getElementById('lat').value = marker.position.lat();
+        //         document.getElementById('lng').value = marker.position.lng();
+        //     }
     }
-});
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD2TQ6CLAIJjiONhaOjQwpEabylN0SjbZk
-&callback=initMap"
-        async defer></script>
+&callback=initMap"></script>
 </body>
 </html>
 
