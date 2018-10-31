@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post Board</title>
+</head>
+<body>
+
+    <h1><strong>My Post Board</strong></h1>
+
+    <div id="posts">
+    <p>title</p>
+    <p>content</p>
+    <p>categories</p>
+    <p>date</p>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+        $(function() {
+            "use strict";
+        $.ajax('data/blog.json').done(function(data) {
+            $('#posts').html(buildHtml(data));
+        });
+            var totalHtml = '';
+            function buildHtml(post) {
+                post.forEach(function(posted){
+                    totalHtml += '<p>';
+                    totalHtml += posted.title;
+                    totalHtml += '<p>';
+                    totalHtml += '<p>';
+                    totalHtml += posted.content;
+                    totalHtml += '<div>';
+                    totalHtml += '<p>';
+                    totalHtml += posted.categories;
+                    totalHtml += '<p>';
+                    totalHtml += posted.date;
+                });
+                return totalHtml
+            }
+
+            $("#posts").first().css('color', 'lime');
+            $('h1').css('color', 'red');
+            $('body').css('background-color', 'black');
+
+        });
+
+
+    </script>
+</body>
+</html>
