@@ -28,6 +28,8 @@ console.log(firstLetter);
 // // of objects (each user object should just have name and age properties).
 const ages = customers.map(customers => customers.name + customers.age);
 console.log(ages);
+
+customers.map(({name, age}) => {name, age})
 // // PROBLEM 3 - create an array of civil servant customers (teachers and police officers)
 // // containing the same properties as the objects on the customers objects
 // // PROBLEM 4 - determine the average age of customers

@@ -51,8 +51,17 @@ let average = output1 / users.length;
 console.log(average);
 
 // 4.Use reduce to get the longest email from the list of users.
-let longest = users.reduce(function (a, b) { return a.email.length > b.email.length ? a : b; });
-console.log(longest);
+const longestEmail = users.reduce((prev, curr) => {
+    if (prev.length < curr.email.length) {
+        return curr.email;
+    }
+        return prev;
+}, "");
+console.log(longestEmail);
+
+// let longest = users.reduce(function (a, b) { return a.email.length > b.email.length ? a : b; });
+// console.log(longest);
+
 // 5.Use reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
 let instructor = [];
 users.forEach(({name}) => {
