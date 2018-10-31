@@ -119,7 +119,7 @@ let developers = [];
 users.forEach(({name, email, languages}) => {
 developers.push(`${name}'s email is ${email} ${name} knows ${languages.join(',')}`);
 });
-      console.log(developers);
+      // console.log(developers);
 let list = '<ul>';
 
   for (let developer of developers){
